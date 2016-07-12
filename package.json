@@ -1,6 +1,6 @@
 {
   "name": "webpack-copy-on-done-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Webpack ",
   "main": "build/webpackCopyOnDonePlugin.js",
   "scripts": {
