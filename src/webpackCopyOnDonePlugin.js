@@ -18,7 +18,7 @@ WebpackCopyOnDonePlugin.prototype.onDone = function (/* params */) {
   console.log('****************************\n');
   this.toCopy.forEach(function(tc) {
     const cpJs = `cp -r ${tc.src} ${tc.target}`;
-    exec(cpJs, self.onCopy(src, target));
+    exec(cpJs, self.onCopy(tc.src, tc.target));
   })
 };
 
