@@ -25,12 +25,13 @@ WebpackCopyOnDonePlugin.prototype.apply = function (compiler) {
 };
 
 WebpackCopyOnDonePlugin.prototype.onDone = function (/* params */) {
+  var self = this;
   console.log('\n\n****************************');
   console.log('[SIGNER PLUGIN] WEBPACK DONE');
   console.log('****************************\n');
   this.toCopy.forEach(function(tc) {
     const cpJs = `cp -r ${tc.src} ${tc.target}`;
-    exec(cpJs, this.puts.bind(this));
+    exec(cpJs, self.puts.bind(self));
   })
 };
 
